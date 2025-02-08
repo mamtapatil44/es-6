@@ -37,6 +37,7 @@ function merge(left, right) {
 
     while (i < left.length) {
         result.push(left[i]);
+        
         i++
     }
     while (j < right.length) {

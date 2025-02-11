@@ -143,5 +143,12 @@ const obj = {
 console.log("value",obj.value)
 
 
+// 9. How can you use arrow functions to simplify array transformations?
+// Hint: Think about methods like `.map()` and 
+// `.filter()`
+// asns: Arrow functions can significantly simplify array transformations because they allow you to write concise, 
+// clean, and more readable code, especially when using methods like .map(), .filter(), and .reduce().
+// Since arrow functions are shorter and automatically lexically bind this, they are perfect for these array methods, 
+// where you typically want to operate on each element without worrying about this.
 
 

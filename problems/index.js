@@ -216,3 +216,20 @@ console.log("===================================================")
 const a = 10;
 const b = 20;
 console.log(`${a} + ${b} = ${a + b}`);
+
+console.log("===================================================")
+// 14. What are the advantages of template literals over traditional string 
+// concatenation?
+// Hint: Consider readability and maintainability.
+
+// 1. Template literals improve the clarity of the code by making it easier to read and understand. 
+// With string concatenation, the use of + operators can make the code cluttered, 
+// especially when dealing with long strings or embedding multiple variables
+// 2. One of the biggest advantages of template literals over traditional concatenation is that they 
+// support multi-line strings natively, 
+// without needing to use escape sequences or + operators.
+// 3.Template literals reduce the complexity of the code, making it more maintainable, 
+// especially when you're dealing with complex strings that involve several variables, expressions, or HTML generation.
+
+
+console.log("===================================================")

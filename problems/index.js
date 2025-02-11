@@ -13,3 +13,34 @@
 for (let i = 0; i < 3; i++) {
   setTimeout(() => console.log("i=",i), 1000);
 }
+
+
+
+// 2. 2. Can you reassign a `const` variable if it holds an object? Explain with 
+// an example.
+// Hint: Focus on the immutability of the reference, not 
+// the object's properties.
+
+// ans:
+// Yes, you can modify the properties of an object assigned to a const variable, 
+// but you cannot reassign the const variable itself to a new object. 
+// The key thing to understand here is that const only ensures that the reference to the object is immutable, 
+// not the object’s internal properties.
+// ex.
+
+const myObj = {
+    name: "mamta",
+    gender:"female"
+
+}
+// we can modify the properties of object
+myObj.name ="sp";
+console.log("myObj ",myObj)
+// myObj = {
+//     name: "Krtitika",
+//     gender:"female"
+
+// }
+
+// console.log("myObj ",myObj)
+// here we are trying to reassign object to const variable so it will trow type error

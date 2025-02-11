@@ -301,3 +301,23 @@ console.log("y" ,z)
 
 
 console.log("=========================================================================================================")
+
+
+// 19. How do you use destructuring with function parameters? Provide an example.
+// Hint: Apply destructuring directly in the parameter list.
+
+// You can use destructuring directly in the function parameters to extract values from objects (or arrays) without needing to reference them inside the function body. 
+// This is a concise way to work with object or array properties right in the parameter list.
+
+const useObj = { name: 'Mam', age: 25 };
+
+function greet({ name, age }) {
+    console.log(`Hello, my name is ${name} and I am ${age} years old.`);
+  }
+  
+greet(useObj);
+
+// { name, age } extracts the properties name and age from the object passed as an argument to greetFunction
+// The useObj is passed into the function, and its properties are automatically destructured 
+// into the variables name and age for use inside the function
+  

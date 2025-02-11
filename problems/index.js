@@ -85,3 +85,16 @@ console.log("myObj ",myObj)
 // The statement const a; is incomplete because a is declared without a value.
 // JavaScript expects an initializer (i.e., a value) to be assigned at the point of declaration.
 // This is why the code throws the error: "Missing initializer in const declaration."
+
+
+
+// 5. 5. Is it possible to use a `const` variable before its declaration? Why or 
+// why not?
+// Hint: Explore the concept of the 'temporal dead zone'
+
+// ans:No, it is not possible to use a const variable before its declaration. This is because of hoisting and the Temporal Dead Zone in JS.
+// Variables declared with const (and let) are hoisted to the top of their block scope, 
+// but unlike var, they do not get initialized to a default value (undefined). 
+// Instead, they remain in a "dead zone" until their declaration is encountered in the code.
+// The TDZ refers to the period between the start of the block and the point where the const variable is declared and initialized. During this period, 
+// trying to access the variable will result in a ReferenceError because the variable is hoisted but not yet initialized.

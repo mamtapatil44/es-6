@@ -68,3 +68,20 @@ console.log("myObj ",myObj)
 // Immutability with const: Protects variables from accidental reassignment, while still allowing modification of object properties.
 // Prevention of Redeclarations: Reduces errors due to accidentally redeclaring variables in the same scope.
 // Cleaner Code: Encourages more predictable and readable code
+
+
+
+// 4. 4. Explain why the following code throws an error:
+// ```javascript
+// const a;
+// a = 10;
+// ```
+// Hint: Consider how `const` must be initialized at 
+// declaration.
+
+// ans:
+// When you declare a variable with const, JavaScript expects that variable to have a value immediately. 
+// This is different from let or var, which allow you to declare a variable and initialize it later.
+// The statement const a; is incomplete because a is declared without a value.
+// JavaScript expects an initializer (i.e., a value) to be assigned at the point of declaration.
+// This is why the code throws the error: "Missing initializer in const declaration."

@@ -44,3 +44,27 @@ console.log("myObj ",myObj)
 
 // console.log("myObj ",myObj)
 // here we are trying to reassign object to const variable so it will trow type error
+
+
+// 3. What are the benefits of using `let` and `const` over `var` in ES6? 
+// Provide real-world examples.
+// Hint: Think about block scoping and hoisting 
+// differences
+
+// ans:
+// 1 . let and const have block scope , scope with {} ,so if we trying to access that variable outside of that scope ,it wull give refenece tye error
+//  var variable have function or global scope
+
+// var and let can declare and reassign the value for it ,but for const it is not possible it will throw tyep error
+
+// redeclare only var variable can be redclare but it will make confusion in the code,so its not reliable
+
+// hoisting : var avraiable is hoisted we can access the var araiable value before declaring it with undefined
+// let are not hoisted ,they have temporal dead zone :means time perios for delaction to intializing ,if we access this between taht zone,it will give refernce type error
+
+// benefits of let and const
+// Block Scoping: Avoids issues of variables leaking into unintended scopes.
+// Hoisting with Temporal Dead Zone (TDZ): Reduces the chance of using variables before they are initialized.
+// Immutability with const: Protects variables from accidental reassignment, while still allowing modification of object properties.
+// Prevention of Redeclarations: Reduces errors due to accidentally redeclaring variables in the same scope.
+// Cleaner Code: Encourages more predictable and readable code

@@ -244,7 +244,7 @@ console.log("===================================================")
 // The tag function receives the literal parts of the template as an array and the evaluated expressions as individual arguments.
 
 function formatString(strings, ...values) {
-    let result = strings[0]; 
+let result = strings[0]; 
   console.log("result1 ",result)
 
     values.forEach((value, index) => {
@@ -261,4 +261,26 @@ function formatString(strings, ...values) {
   const formattedMessage = formatString`The price of the ${product} is $${price}.`;
   
   console.log(formattedMessage);
-  
+  console.log("===================================================")
+
+//   16.16. How do you extract name and age from the following object?
+// const user = { name: 'John', age: 30 };
+
+// Hint: Use object destructuring syntax.
+const userObj = { name: 'John', age: 30 };
+
+// Destructuring 
+const { name, age=60 } = userObj;
+
+console.log(name); 
+console.log(age);  
+
+console.log("===================================================")
+// 17. Explain how to provide default values during destructuring.
+// Hint: Use `=` to set defaults
+// When destructuring an object or array, 
+// you can assign a default value by using the = operator after the variable name.
+
+const { gender="male" } = userObj;
+console.log(gender); 
+// in above example useObj doest have gender property but it destructed and assigned with by deaflut value =male,if it doext not exist it takes defalut value, and it exist in obj ,it will take from that obj

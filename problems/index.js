@@ -98,3 +98,50 @@ console.log("myObj ",myObj)
 // Instead, they remain in a "dead zone" until their declaration is encountered in the code.
 // The TDZ refers to the period between the start of the block and the point where the const variable is declared and initialized. During this period, 
 // trying to access the variable will result in a ReferenceError because the variable is hoisted but not yet initialized.
+
+
+
+//  6. Explain the difference between a regular function and an arrow 
+// function with regard to `this` context.
+// Hint: Arrow functions inherit `this` from their 
+// enclosing scope.
+// ans: In a regular function, the value of this is determined by how the function is called, not by where it's defined. This is often referred to as the "dynamic" or "runtime" binding of this.
+// Arrow functions, on the other hand, do not have their own this. Instead, they inherit the this value from the enclosing lexical scope
+
+
+// 7. 7. Rewrite the following code using an arrow function:
+// ```javascript
+// function add(a, b) {
+//   return a + b;
+// }
+// ```
+// Hint: Arrow functions offer a more concise syntax.
+
+const add = (a,b)=>{
+return a+b
+}
+console.log("addition",add(5,6))
+
+// 8. 8. Why does the following code throw an error?
+// ```javascript
+// const obj = {
+//   value: 10,
+//   increment: () => {
+//     this.value++;
+//   },
+// };
+// obj.increment();
+// ```
+const obj = {
+  value: 10,
+  increment: () => {
+    this.value++;
+  },
+};
+// obj.increment(); // can not read property of undfined
+
+console.log("value",obj.value)
+
+
+
+

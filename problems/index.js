@@ -14,7 +14,7 @@ for (let i = 0; i < 3; i++) {
   setTimeout(() => console.log("i=",i), 1000);
 }
 
-
+console.log("===================================================")
 
 // 2. 2. Can you reassign a `const` variable if it holds an object? Explain with 
 // an example.
@@ -45,6 +45,7 @@ console.log("myObj ",myObj)
 // console.log("myObj ",myObj)
 // here we are trying to reassign object to const variable so it will trow type error
 
+console.log("===================================================")
 
 // 3. What are the benefits of using `let` and `const` over `var` in ES6? 
 // Provide real-world examples.
@@ -69,7 +70,7 @@ console.log("myObj ",myObj)
 // Prevention of Redeclarations: Reduces errors due to accidentally redeclaring variables in the same scope.
 // Cleaner Code: Encourages more predictable and readable code
 
-
+console.log("===================================================")
 
 // 4. 4. Explain why the following code throws an error:
 // ```javascript
@@ -86,7 +87,7 @@ console.log("myObj ",myObj)
 // JavaScript expects an initializer (i.e., a value) to be assigned at the point of declaration.
 // This is why the code throws the error: "Missing initializer in const declaration."
 
-
+console.log("===================================================")
 
 // 5. 5. Is it possible to use a `const` variable before its declaration? Why or 
 // why not?
@@ -99,7 +100,7 @@ console.log("myObj ",myObj)
 // The TDZ refers to the period between the start of the block and the point where the const variable is declared and initialized. During this period, 
 // trying to access the variable will result in a ReferenceError because the variable is hoisted but not yet initialized.
 
-
+console.log("===================================================")
 
 //  6. Explain the difference between a regular function and an arrow 
 // function with regard to `this` context.
@@ -121,7 +122,7 @@ const add = (a,b)=>{
 return a+b
 }
 console.log("addition",add(5,6))
-
+console.log("===================================================")
 // 8. 8. Why does the following code throw an error?
 // ```javascript
 // const obj = {
@@ -142,7 +143,7 @@ const obj = {
 
 console.log("value",obj.value)
 
-
+console.log("===================================================")
 // 9. How can you use arrow functions to simplify array transformations?
 // Hint: Think about methods like `.map()` and 
 // `.filter()`
@@ -150,7 +151,7 @@ console.log("value",obj.value)
 // clean, and more readable code, especially when using methods like .map(), .filter(), and .reduce().
 // Since arrow functions are shorter and automatically lexically bind this, they are perfect for these array methods, 
 
-
+console.log("===================================================")
 // 10.10. Can you use `new` with an arrow function? Why or why not?
 // Hint: Arrow functions do not have a `prototype`
 // No, you cannot use new with an arrow function.
@@ -166,14 +167,15 @@ const Person = () => {
 // Since arrow functions lack a prototype, trying to use new with an arrow function results in a TypeError, 
 // as arrow functions are not meant to be used as constructors.
 
-
+console.log("===================================================")
 
 // 11. Use template literals to dynamically generate an HTML string with 
 // user data.
 // Hint: Explore string interpolation and multi-line 
 // strings.
 // ans:
-// Template literals in JavaScript provide a powerful way to generate dynamic HTML strings with user data. They allow for string interpolation and multi-line strings, 
+// Template literals in JavaScript provide a powerful way to generate dynamic HTML strings with user data. 
+// They allow for string interpolation and multi-line strings, 
 // which makes it easy to generate complex HTML without using concatenation.
 
 const user = {
@@ -191,4 +193,11 @@ const user = {
   `;
   
   console.log("htmlString ",htmlString)
+
+
+  console.log("===================================================")
+
+//   12. How do you include expressions inside template literals? Provide an 
+// example.
+// Hint: Use `${}` for embedding expressions.
   

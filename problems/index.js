@@ -197,7 +197,22 @@ const user = {
 
   console.log("===================================================")
 
-//   12. How do you include expressions inside template literals? Provide an 
+// 12. How do you include expressions inside template literals? Provide an 
 // example.
 // Hint: Use `${}` for embedding expressions.
+
+// ans: To include expressions inside template literals, you can use the ${} syntax for string interpolation. This allows you to embed any valid JavaScript expression directly into the string. 
+// The expression inside the ${} is evaluated, and its result is inserted into the string.
   
+console.log("===================================================")
+
+// 13. What will this code log?
+// const a = 10;
+// const b = 20;
+// console.log(`${a} + ${b} = ${a + b}`);
+// Hint: Focus on string interpolation.
+
+// ans : 10+20 = 30
+const a = 10;
+const b = 20;
+console.log(`${a} + ${b} = ${a + b}`);

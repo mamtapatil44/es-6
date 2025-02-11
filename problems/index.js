@@ -283,4 +283,21 @@ console.log("===================================================")
 
 const { gender="male" } = userObj;
 console.log(gender); 
-// in above example useObj doest have gender property but it destructed and assigned with by deaflut value =male,if it doext not exist it takes defalut value, and it exist in obj ,it will take from that obj
+// in above example useObj doest have gender property but it destructed and assigned with by deaflut value =male,
+// if it doext not exist it takes defalut value, and it exist in obj ,it will take from that obj
+
+console.log("=========================================================================================================")
+// 18. How would you extract `x` and `z` from this nested object?
+// ```javascript
+// const obj = { x: 10, y: { z: 20 } };
+// ```
+// Hint: Use nested destructuring
+
+const obj1 = { x: 10, y: { z: 20 } };
+const { x, y: { z } } = obj1;
+console.log("x" ,x)
+console.log("y" ,z)
+
+
+
+console.log("=========================================================================================================")

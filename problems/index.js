@@ -149,6 +149,19 @@ console.log("value",obj.value)
 // asns: Arrow functions can significantly simplify array transformations because they allow you to write concise, 
 // clean, and more readable code, especially when using methods like .map(), .filter(), and .reduce().
 // Since arrow functions are shorter and automatically lexically bind this, they are perfect for these array methods, 
-// where you typically want to operate on each element without worrying about this.
 
 
+// 10.10. Can you use `new` with an arrow function? Why or why not?
+// Hint: Arrow functions do not have a `prototype`
+// No, you cannot use new with an arrow function.
+
+const Person = () => {
+    this.name = "John";
+  };
+  
+  const john = new Person();  // TypeError: Person is not a constructor
+
+// Arrow functions do not have a prototype property.
+// The new operator expects a function that has a prototype property (i.e. a constructor function) to create an instance.
+// Since arrow functions lack a prototype, trying to use new with an arrow function results in a TypeError, 
+// as arrow functions are not meant to be used as constructors.

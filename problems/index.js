@@ -306,7 +306,8 @@ console.log("===================================================================
 // 19. How do you use destructuring with function parameters? Provide an example.
 // Hint: Apply destructuring directly in the parameter list.
 
-// You can use destructuring directly in the function parameters to extract values from objects (or arrays) without needing to reference them inside the function body. 
+// You can use destructuring directly in the function parameters to extract values from objects (or arrays) 
+// without needing to reference them inside the function body. 
 // This is a concise way to work with object or array properties right in the parameter list.
 
 const useObj = { name: 'Mam', age: 25 };
@@ -320,4 +321,20 @@ greet(useObj);
 // { name, age } extracts the properties name and age from the object passed as an argument to greetFunction
 // The useObj is passed into the function, and its properties are automatically destructured 
 // into the variables name and age for use inside the function
+
+
+
+console.log("=========================================================================================================")
+// 20. Can you swap two variables using array destructuring?
+// Hint: Use `[a, b] = [b, a]`
+// Yes, you can easily swap two variables using array destructuring in JavaScript.
+let n = 5;
+let m = 10;
+
+// Swapping 
+[n, m] = [m, n];
+
+console.log(n); // n: 10
+console.log(m); // m: 5
+
   

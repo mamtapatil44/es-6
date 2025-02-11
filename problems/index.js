@@ -233,3 +233,32 @@ console.log("===================================================")
 
 
 console.log("===================================================")
+
+// 15. Can you use template literals in tagged templates? Provide an 
+// example.
+// Hint: Explore how tagged templates can process the 
+// literal and expressions.
+
+// ans : Yes, you can use template literals in tagged templates! 
+// Tagged templates allow you to process the template literal and its embedded expressions through a function. 
+// The tag function receives the literal parts of the template as an array and the evaluated expressions as individual arguments.
+
+function formatString(strings, ...values) {
+    let result = strings[0]; 
+  console.log("result1 ",result)
+
+    values.forEach((value, index) => {
+        console.log("value ",value)
+        result += `${(typeof value === 'string' ? value.toUpperCase() : value)}${strings[index + 1]}`;
+    });
+    console.log("result2 ",result)
+    return result;
+  }
+  
+  const product = "laptop";
+  const price = 1299;
+  
+  const formattedMessage = formatString`The price of the ${product} is $${price}.`;
+  
+  console.log(formattedMessage);
+  

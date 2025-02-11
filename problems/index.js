@@ -159,9 +159,36 @@ const Person = () => {
     this.name = "John";
   };
   
-  const john = new Person();  // TypeError: Person is not a constructor
+//   const john = new Person();  // TypeError: Person is not a constructor
 
 // Arrow functions do not have a prototype property.
 // The new operator expects a function that has a prototype property (i.e. a constructor function) to create an instance.
 // Since arrow functions lack a prototype, trying to use new with an arrow function results in a TypeError, 
 // as arrow functions are not meant to be used as constructors.
+
+
+
+// 11. Use template literals to dynamically generate an HTML string with 
+// user data.
+// Hint: Explore string interpolation and multi-line 
+// strings.
+// ans:
+// Template literals in JavaScript provide a powerful way to generate dynamic HTML strings with user data. They allow for string interpolation and multi-line strings, 
+// which makes it easy to generate complex HTML without using concatenation.
+
+const user = {
+    name: "Mp Patil",
+    age: 30,
+    email: "mp@example.com"
+  };
+  
+  const htmlString = `
+    <div class="user-profile">
+      <h1>${user.name}</h1>
+      <p>Age: ${user.age}</p>
+      <p>Email: <a href="mailto:${user.email}">${user.email}</a></p>
+    </div>
+  `;
+  
+  console.log("htmlString ",htmlString)
+  

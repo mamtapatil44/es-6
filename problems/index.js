@@ -337,4 +337,32 @@ let m = 10;
 console.log(n); // n: 10
 console.log(m); // m: 5
 
+console.log("=========================================================================================================")
+
+// 21. Write a promise-based function that resolves after 2 seconds and logs'Done.'
+// Hint: Use `setTimeout` inside the `Promise` constructor
+
+const promise = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+     resolve("Done")
+    },2000)
+})
+promise.then((data)=>{
+    console.log("promise ",data)
+})
+
+function resolveAfter2Seconds() {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        console.log('Done.');
+        resolve();
+      }, 2000); 
+    });
+  }
+//   After 2 seconds, the setTimeout callback logs 'Done.' to the console and then resolves the promise using resolve()
+  
+  resolveAfter2Seconds();
+
+  console.log("=========================================================================================================")
+
   

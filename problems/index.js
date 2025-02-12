@@ -365,4 +365,48 @@ function resolveAfter2Seconds() {
 
   console.log("=========================================================================================================")
 
+//   22. How do you chain multiple promises? Provide an example.
+// Hint: Use `.then()`.
+// ans: You can chain multiple promises by using the .then() method. 
+// Each .then() returns a new promise, which can be chained together to perform sequential asynchronous operations. 
+// This allows you to handle a sequence of asynchronous tasks,
+// where each subsequent task can be dependent on the result of the previous one.
+
+function task1(){
+
+    return new Promise((resolve)=>{  
+        setTimeout(()=>{
+            console.log("Task 1 completed")
+            resolve("Data form task 1")
+        },1000)
+        
+    })  
+}
+
+
+function task2(task1data){
+    return new Promise((resolve)=>{  
+        setTimeout(()=>{
+            console.log("Task 2 completed")
+            resolve(`${task1data} - Task two data`)
+        },1000)
+        
+    })
+}
+
+
+
+function task3(task2){
+    return new Promise((resolve)=>{         
+        setTimeout(()=>{
+            console.log("Task 3 completed")
+            resolve(`${task2} - Task three data`)
+        },1000)
+        
+    })
+}
+
+
+
+
   
